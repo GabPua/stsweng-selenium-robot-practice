@@ -2,20 +2,20 @@
 Suite Setup         Open Browser To Login Page
 Suite Teardown      Close Browser
 Test Setup          Go To Login Page
-Test Template       Login With Locked Out User Should Fail
+Test Template       Login With Invalid Credentials Should Fail
 Resource            resource.robot
 
 *** Variables ***
 ${ERROR}            css:*[data-test="error"]
-${ERROR_MSG}        Epic sadface: Sorry, this user has been locked out.
+${ERROR_MSG}        Epic sadface: Username and password do not match any user in this service
 ${ERROR_ICON1}      css:.form_group:nth-child(1) > .svg-inline--fa
 ${ERROR_ICON2}      css:.form_group:nth-child(2) > .svg-inline--fa
 
 *** Test Cases ***
-Locked Out User     locked_out_user   secret_sauce
+Invalid Credentials   standard_user   secret_salsa
 
 *** Keywords ***
-Login With Locked Out User Should Fail
+Login With Invalid Credentials Should Fail
     [Arguments]     ${username}     ${password}
     Input Username  ${username}
     Input Password  ${password}
