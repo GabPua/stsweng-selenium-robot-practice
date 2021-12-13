@@ -12,7 +12,7 @@ ${ERROR_ICON1}      css:.form_group:nth-child(1) > .svg-inline--fa
 ${ERROR_ICON2}      css:.form_group:nth-child(2) > .svg-inline--fa
 
 *** Test Cases ***
-Locked Out User     locked_out_user   secret_sauce
+Locked Out User     locked_out_user     secret_sauce
 
 *** Keywords ***
 Login With Locked Out User Should Fail

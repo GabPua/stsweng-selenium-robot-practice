@@ -12,7 +12,7 @@ ${ERROR_ICON1}      css:.form_group:nth-child(1) > .svg-inline--fa
 ${ERROR_ICON2}      css:.form_group:nth-child(2) > .svg-inline--fa
 
 *** Test Cases ***
-Invalid Credentials   standard_user   secret_salsa
+Invalid Credentials   standard_user     secret_salsa
 
 *** Keywords ***
 Login With Invalid Credentials Should Fail

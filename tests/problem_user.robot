@@ -9,7 +9,7 @@ Resource            resource.robot
 ${IMG_SRC}          /static/media/sauce-backpack-1200x1500.34e7aa42.jpg
 
 *** Test Cases ***
-Valid Credentials   problem_user   secret_sauce
+Valid Credentials   problem_user    secret_sauce
 
 *** Keywords ***
 Login With Problem User Should Fail
