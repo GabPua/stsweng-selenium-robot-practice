@@ -5,10 +5,11 @@ Test Setup          Go To Login Page
 Test Template       Login With Valid Credentials Should Pass
 Resource            resource.robot
 
+*** Variables ***
+${IMG_SRC}          /static/media/sauce-backpack-1200x1500.34e7aa42.jpg
+
 *** Test Cases ***
-Valid Credentials Set 1     standard_user               secret_sauce
-Valid Credentials Set 2     problem_user                secret_sauce
-Valid Credentials Set 3     performance_glitch_user     secret_sauce
+Valid Credentials   standard_user   secret_sauce
 
 *** Keywords ***
 Login With Valid Credentials Should Pass
@@ -17,3 +18,7 @@ Login With Valid Credentials Should Pass
     Input Password  ${password}
     Submit Credentials
     Inventory Page Should Be Open
+    Inventory Page Is Correct
+
+Inventory Page Is Correct
+    Page Should Contain Image   ${IMG_SRC}
